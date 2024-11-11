@@ -22,20 +22,14 @@ echo "title: "$2 >"config.yml"
 mkdir doc
 cd doc
 
-pom1='<html>
+echo '<html>
     <head>
-        <meta http-equiv="refresh" content="0; url='
-
-pom2='" />
+        <meta http-equiv="refresh" content="0; url='$3'"/>
     </head>
     <body>
-        <p><a href="'
-
-pom3='">Redirect</a></p>
+        <p><a href="'$3'">Redirect</a></p>
     </body>
-</html>'
-
-echo $pom1$3$pom2$3$pom3 >index.html
+</html>' >index.html
 zip $1"zad.html.zip" index.html >/dev/null
 rm index.html
 
